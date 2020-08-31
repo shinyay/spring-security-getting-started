@@ -11,6 +11,7 @@ Overview
 ### EnableWebSecurity
 `AnnotationConfigWebApplicationContext` reads `@EnableWebSecurity` annotated class.
 Generally `@EnableWebSecurity` annotated class extends `WebSecurityConfigurerAdapter`
+The application demands *User* and *Password* even if you don't put `@EnableWebSecurity` class. Therefore you should override the security action or remove Security dependency.
 
 ## Demo
 
