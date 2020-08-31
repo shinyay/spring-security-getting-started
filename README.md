@@ -8,6 +8,10 @@ Overview
 - spring-boot-starter-web
 - spring-boot-starter-thymeleaf
 
+### EnableWebSecurity
+`AnnotationConfigWebApplicationContext` reads `@EnableWebSecurity` annotated class.
+Generally `@EnableWebSecurity` annotated class extends `WebSecurityConfigurerAdapter`
+
 ## Demo
 
 ## Features
