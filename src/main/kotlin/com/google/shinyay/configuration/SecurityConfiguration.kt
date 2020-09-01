@@ -12,7 +12,19 @@ import org.springframework.security.core.userdetails.UserDetailsService
 class SecurityConfiguration : WebSecurityConfigurerAdapter() {
 
     override fun configure(http: HttpSecurity?) {
-        super.configure(http)
+        http
+                ?.authorizeRequests()
+                ?.antMatchers("/", "/home")
+                ?.permitAll()
+                ?.anyRequest()
+                ?.authenticated()
+                ?.and()
+                ?.formLogin()
+                ?.loginPage("/login")
+                ?.permitAll()
+                ?.and()
+                ?.logout()
+                ?.permitAll()
     }
 
     @Bean
