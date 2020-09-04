@@ -14,17 +14,17 @@ class SecurityConfiguration : WebSecurityConfigurerAdapter() {
     override fun configure(http: HttpSecurity?) {
         http
                 ?.authorizeRequests()
-                ?.antMatchers("/", "/home")
-                ?.permitAll()
-                ?.anyRequest()
-                ?.authenticated()
-                ?.and()
+                    ?.antMatchers("/", "/home")
+                    ?.permitAll()
+                    ?.anyRequest()
+                    ?.authenticated()
+                    ?.and()
                 ?.formLogin()
-                ?.loginPage("/login")
-                ?.permitAll()
-                ?.and()
+                    ?.loginPage("/login")
+                    ?.permitAll()
+                    ?.and()
                 ?.logout()
-                ?.permitAll()
+                    ?.permitAll()
     }
 
     @Bean
