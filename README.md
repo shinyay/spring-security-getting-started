@@ -1,6 +1,6 @@
-# Name
+# Spring Security Getting Started
 
-Overview
+Getting Started with Simple Web application protected by Spring Security
 
 ## Description
 ### Dependency
