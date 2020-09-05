@@ -13,6 +13,18 @@ Getting Started with Simple Web application protected by Spring Security
 Generally `@EnableWebSecurity` annotated class extends `WebSecurityConfigurerAdapter`
 The application demands *User* and *Password* even if you don't put `@EnableWebSecurity` class. Therefore you should override the security action or remove Security dependency.
 
+### WebMvcConfigurer
+Defines callback methods to customize the Java-based configuration for Spring MVC
+
+#### addViewControllers(ViewControllerRegistry registry)
+Configure simple automated controllers pre-configured with the response status code and/or a view to render the response body.
+
+```kotlin
+override fun addViewControllers(registry: ViewControllerRegistry) {
+    registry.addViewController("/home").setViewName("home")
+}
+```
+
 ## Demo
 
 ## Features
