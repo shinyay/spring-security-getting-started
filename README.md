@@ -25,6 +25,8 @@ override fun addViewControllers(registry: ViewControllerRegistry) {
 }
 ```
 
+### WebSecurityConfigurerAdapter
+Provides a convenient base class for creating a WebSecurityConfigurer instance. The implementation allows customization by overriding methods.
 ## Demo
 
 ## Features
