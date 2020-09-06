@@ -27,6 +27,10 @@ override fun addViewControllers(registry: ViewControllerRegistry) {
 
 ### WebSecurityConfigurerAdapter
 Provides a convenient base class for creating a WebSecurityConfigurer instance. The implementation allows customization by overriding methods.
+
+#### configure(HttpSecurity http)
+It defines which URL paths should be secured and which should not.
+
 ## Demo
 
 ## Features
