@@ -38,6 +38,13 @@ http
     ?.anyRequest()
     ?.authenticated()
 ```
+
+The following code block is permitting to access the path defined with Ant-style pattern.
+`"\"` and `"\home"` is permitted to access without authentication.
+```kotlin
+http?.authorizeRequests()
+    ?.antMatchers("/", "/home")?.permitAll()
+```
 ## Demo
 
 ## Features
