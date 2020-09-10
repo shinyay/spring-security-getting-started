@@ -31,6 +31,13 @@ Provides a convenient base class for creating a WebSecurityConfigurer instance. 
 #### configure(HttpSecurity http)
 It defines which URL paths should be secured and which should not.
 
+The following code block is required.
+```kotlin
+http
+    ?.authorizeRequests()
+    ?.anyRequest()
+    ?.authenticated()
+```
 ## Demo
 
 ## Features
