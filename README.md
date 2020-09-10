@@ -62,9 +62,9 @@ The following code block is providing custom login-page.
 http?.formLogin()
 ```
 
+### UserDetailsService
 `userDetailsService()` method sets up an in-memory user store with a single user. 
 
-### UserDetailsService
 
 ```kotlin
 val user: UserDetails = User.withDefaultPasswordEncoder()
