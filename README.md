@@ -39,6 +39,12 @@ http
     ?.authenticated()
 ```
 
+- `?` matches one character
+- `*` matches zero or more characters
+- `**` matches zero or more 'directories' in a path
+- `{spring:[a-z]+}` matches the regexp `[a-z]+` as a path variable named "spring"
+
+
 The following code block is permitting to access the path defined with Ant-style pattern.
 `"\"` and `"\home"` is permitted to access without authentication.
 ```kotlin
