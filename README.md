@@ -45,6 +45,12 @@ The following code block is permitting to access the path defined with Ant-style
 http?.authorizeRequests()
     ?.antMatchers("/", "/home")?.permitAll()
 ```
+
+The following code block is Forms Authentication.
+```kotlin
+http?.formLogin()
+```
+
 ## Demo
 
 ## Features
