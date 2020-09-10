@@ -64,7 +64,9 @@ http?.formLogin()
 
 ### UserDetailsService
 `userDetailsService()` method sets up an in-memory user store with a single user. 
-
+- **Username**: `user`
+- **Password**: `password`
+- **Role**: `USER`
 
 ```kotlin
 val user: UserDetails = User.withDefaultPasswordEncoder()
