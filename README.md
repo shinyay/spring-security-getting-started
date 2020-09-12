@@ -54,7 +54,7 @@ http?.authorizeRequests()
 
 The following code block is Forms Authentication.
 ```kotlin
-http?.formLogin()?.loginPage("/login")
+http?.formLogin()
 ```
 
 The following code block is providing custom login-page.
