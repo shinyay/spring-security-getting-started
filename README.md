@@ -62,7 +62,7 @@ You can define a custom Form Login page as following
 http?.formLogin()?.loginPage("/login")
 ```
 
-The following code block is providing custom login-page.
+The following code block is providing custom login view.
 ```kotlin
 http?.formLogin()
 ```
@@ -82,6 +82,30 @@ val user: UserDetails = User.withDefaultPasswordEncoder()
 return InMemoryUserDetailsManager(user)
 ```
 
+### Custom Login View
+- `src/main/resources/templates/login.html`
+```html
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Spring Security Example </title>
+    </head>
+    <body>
+        <div th:if="${param.error}">
+            Invalid username and password.
+        </div>
+        <div th:if="${param.logout}">
+            You have been logged out.
+        </div>
+        <form th:action="@{/login}" method="post">
+            <div><label> User Name : <input type="text" name="username"/> </label></div>
+            <div><label> Password: <input type="password" name="password"/> </label></div>
+            <div><input type="submit" value="Sign In"/></div>
+        </form>
+    </body>
+</html>
+```
 ## Demo
 
 ## Features
