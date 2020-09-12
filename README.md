@@ -57,6 +57,11 @@ The following code block is Forms Authentication.
 http?.formLogin()
 ```
 
+You can define a custom Form Login page as following
+```kotlin
+http?.formLogin()?.loginPage("/login")
+```
+
 The following code block is providing custom login-page.
 ```kotlin
 http?.formLogin()
