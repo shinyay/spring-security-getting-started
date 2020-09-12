@@ -84,6 +84,7 @@ return InMemoryUserDetailsManager(user)
 
 ### Custom Login View
 - `src/main/resources/templates/login.html`
+
 ```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
@@ -106,6 +107,15 @@ return InMemoryUserDetailsManager(user)
     </body>
 </html>
 ```
+
+The thymeleaf template posts `username` and `password` to `/login`.
+```html
+<form th:action="@{/login}" method="post">
+```
+
+
+
+
 ## Demo
 
 ## Features
