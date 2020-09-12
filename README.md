@@ -118,6 +118,15 @@ If you fail to login, Spring Security redirects to `/login?error`. You can retri
 <div th:if="${param.error}">
 ```
 
+When you logout, Spring Security redirects to `/login?logout`.
+```html
+<div th:if="${param.logout}">
+```
+
+If you want to change logout url, you can modify definition same Form Login.
+```kotlin
+logout()?.logoutSuccessUrl("/logout")?.permitAll()
+```
 
 ## Demo
 
