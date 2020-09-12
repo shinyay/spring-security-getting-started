@@ -113,7 +113,10 @@ The thymeleaf template posts `username` and `password` to `/login`.
 <form th:action="@{/login}" method="post">
 ```
 
-
+If you fail to login, Spring Security redirects to `/login?error`. You can retrieve `error` parameter by EL `${param.error}`.
+```html
+<div th:if="${param.error}">
+```
 
 
 ## Demo
