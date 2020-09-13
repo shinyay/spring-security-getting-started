@@ -128,6 +128,15 @@ If you want to change logout url, you can modify definition same Form Login.
 logout()?.logoutSuccessUrl("/logout")?.permitAll()
 ```
 
+### Display Username
+You can display login username by `HttpServletRequest#getRemoteUser()`
+```html
+<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+```
+
 ## Demo
 
 ## Features
