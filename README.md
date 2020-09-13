@@ -129,7 +129,8 @@ logout()?.logoutSuccessUrl("/logout")?.permitAll()
 ```
 
 ### Display Username
-You can display login username by `HttpServletRequest#getRemoteUser()`
+- You can display login username by `HttpServletRequest#getRemoteUser()`
+- You can logout when you access to `/logout`
 ```html
 <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
 <form th:action="@{/logout}" method="post">
